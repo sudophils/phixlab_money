@@ -57,14 +57,14 @@ class TransactionTile extends StatelessWidget {
           children: [
             Text(
               "-${transaction.amount}",
-              style: Theme.of(context).textTheme.bodyText1?.copyWith(
+              style: Theme.of(context).textTheme.bodyText1?.copyWith(fontWeight: FontWeight.w700,
                   color: transaction.transactionType == TransactionType.outflow
                       ? Colors.red
                       : primaryDark),
             ),
             Text(
               transaction.date,
-              style: Theme.of(context).textTheme.bodyText1,
+              style: Theme.of(context).textTheme.bodyText1?.copyWith(color: fontSubHeading),
             )
           ],
         ),
