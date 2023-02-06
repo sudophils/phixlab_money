@@ -35,7 +35,7 @@ class GeneralAccountInfoTile extends StatelessWidget {
             .bodyText2
             ?.copyWith(color: fontSubHeading),
       ),
-      trailing: Icon(Icons.keyboard_arrow_right_rounded, color: fontSubHeading),
+      trailing: const Icon(Icons.keyboard_arrow_right_rounded, color: fontSubHeading),
     );
   }
 }
