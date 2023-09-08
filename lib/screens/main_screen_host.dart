@@ -3,6 +3,8 @@ import 'package:phixlab_money/screens/home_profile_tab.dart';
 import 'package:phixlab_money/screens/home_screen_tab.dart';
 import 'package:phixlab_money/utils/constants.dart';
 
+import '../widget/chart/gradient_chart.dart';
+
 class MainScreenHost extends StatefulWidget {
   const MainScreenHost({Key? key}) : super(key: key);
 
@@ -18,7 +20,7 @@ class _MainScreenHostState extends State<MainScreenHost> {
       case 0:
         return const HomeScreenTab();
       case 1:
-        return Container();
+        return const GradientChartWidget();
       case 2:
         return Container();
       case 3:
