@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../widget/chart/gradient_chart.dart';
 
 class ExpenseScreen extends StatelessWidget {
   const ExpenseScreen({Key? key}) : super(key: key);
@@ -10,7 +9,7 @@ class ExpenseScreen extends StatelessWidget {
     return Scaffold(
         body: SafeArea(
       child: Column(
-        children: [const GradientChartWidget()],
+        children: [],
       ),
     ));
   }
