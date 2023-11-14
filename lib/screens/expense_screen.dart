@@ -47,7 +47,7 @@ class _ExpenseScreenState extends State<ExpenseScreen> {
                 color: Colors.transparent,
                 height: 300,
                 width: double.infinity,
-                child: Center(child: Text('No Data yet'))));
+                child: const Center(child: Text('No Data yet'))));
       case 2:
         return ExpenseTimeFrame();
     }
