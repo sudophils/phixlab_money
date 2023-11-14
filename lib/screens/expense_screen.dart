@@ -130,6 +130,7 @@ class _ExpenseScreenState extends State<ExpenseScreen> {
                       final item = _transCategories?[index];
 
                       return CustomSelector(
+                        height: 40,
                           onTap: () {
                             transactionsFilter.clear();
                             setState(() {});

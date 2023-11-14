@@ -32,9 +32,11 @@ class _CustomSelectorState extends State<CustomSelector> {
             borderRadius: BorderRadius.circular(100),
             color: Colors.white,
             boxShadow: widget.isSelected
-                ? const [
+                ? [
                     BoxShadow(
-                        color: Colors.grey, offset: Offset(1, 5), blurRadius: 9)
+                        color: Colors.grey.withOpacity(.4),
+                        offset: const Offset(0, 8),
+                        blurRadius: 15)
                   ]
                 : null),
         child: Padding(
