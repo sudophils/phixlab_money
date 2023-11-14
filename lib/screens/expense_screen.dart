@@ -1,4 +1,3 @@
-
 import 'package:bezier_chart_plus/bezier_chart_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:phixlab_money/utils/constants.dart';
@@ -44,10 +43,11 @@ class _ExpenseScreenState extends State<ExpenseScreen> {
       case 0:
       case 1:
         return Center(
-            child:
-                Container(
-                  color: Colors.transparent,
-                    height: 300, width: double.infinity, child: Center(child: Text('No Data yet'))));
+            child: Container(
+                color: Colors.transparent,
+                height: 300,
+                width: double.infinity,
+                child: Center(child: Text('No Data yet'))));
       case 2:
         return ExpenseTimeFrame();
     }
@@ -105,7 +105,9 @@ class _ExpenseScreenState extends State<ExpenseScreen> {
                                   }),
                             ),
                           ),
-                          const SizedBox(width: 16,),
+                          const SizedBox(
+                            width: 16,
+                          ),
                           const Padding(
                             padding: EdgeInsets.only(right: 16.0),
                             child: Icon(Icons.calendar_month_rounded),
@@ -142,8 +144,11 @@ class _ExpenseScreenState extends State<ExpenseScreen> {
                     }),
                   ],
                 ),
-                ...transactionsFilter.map((transaction) =>
-                    TransactionTile(transaction: transaction))
+                const SizedBox(
+                  height: 24,
+                ),
+                ...transactionsFilter.map(
+                    (transaction) => TransactionTile(transaction: transaction))
               ],
             ),
           ),
