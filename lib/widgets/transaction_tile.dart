@@ -1,8 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:phixlab_money/data/user_data.dart';
 
+import '../data/userInfo.dart';
 import '../utils/constants.dart';
 
 class TransactionTile extends StatelessWidget {
@@ -39,7 +39,7 @@ class TransactionTile extends StatelessWidget {
                   const BorderRadius.all(Radius.circular(defaultRadius))),
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: transaction.itemCategory == ItemCategory.fashion
+            child: transaction.itemCategoryName == ItemCategoryType.fashion.name
                 ? const Icon(Icons.man, size: 30, color: Colors.white)
                 : const Icon(Icons.wallet, size: 30, color: Colors.white),
           ),

@@ -3,6 +3,7 @@ import 'package:phixlab_money/screens/profile_screen.dart';
 
 import '../utils/constants.dart';
 import 'home_screen.dart';
+import 'expense_screen.dart';
 
 class MainScreenHost extends StatefulWidget {
   const MainScreenHost({super.key});
@@ -19,7 +20,9 @@ class _MainScreenHostState extends State<MainScreenHost> {
       case 0:
         return const HomeScreen();
       case 1:
-        return const Center(child: Text("Stats"));
+
+        return const ExpenseScreen();
+
       case 2:
         return const Center(
           child: Text("Wallet"),

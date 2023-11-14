@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../data/user_data.dart';
+import '../data/userInfo.dart';
 import '../utils/constants.dart';
 import '../widgets/income_expense_card.dart';
 import '../widgets/transaction_tile.dart';
@@ -44,7 +44,7 @@ class HomeScreen extends StatelessWidget {
                     Padding(
                       padding:
                           const EdgeInsets.symmetric(vertical: defaultSpacing),
-                      child: Text(userData.balance,
+                      child: Text(userdata.totalBalance,
                           style: Theme.of(context)
                               .textTheme
                               .subtitle1
@@ -68,7 +68,7 @@ class HomeScreen extends StatelessWidget {
                           child: IncomeExpenseCard(
                               bgColor: primaryDark,
                               label: "Income",
-                              balance: userData.income,
+                              balance: userdata.inflow,
                               icon: Icons.arrow_upward),
                         ),
                         const SizedBox(
@@ -78,7 +78,7 @@ class HomeScreen extends StatelessWidget {
                           child: IncomeExpenseCard(
                               bgColor: accent,
                               label: "Expenses",
-                              balance: ' -${userData.outflow}',
+                              balance: ' -${userdata.outflow}',
                               icon: Icons.arrow_downward),
                         ),
                       ],
@@ -109,7 +109,7 @@ class HomeScreen extends StatelessWidget {
                         child: Text("Today"),
                       ),
                     ),
-                    ...userData.transactions.map((transaction) =>
+                    ...userdata.transactions.map((transaction) =>
                         TransactionTile(transaction: transaction)),
                     const Align(
                       alignment: Alignment.bottomLeft,
